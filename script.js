@@ -10,15 +10,13 @@ btn.addEventListener('click', function(){
 })
 
 // Deposit button event handler
+
 var depositBtn = document.getElementById('addDeposit');
 depositBtn.addEventListener('click', function(){
-    // const depositAmount = document.getElementById('pickDeposit').value;
-    // var depositNumber = parseFloat(depositAmount);
-    const depositNumber= getInputNumber("pickDeposit");
-    
+
+    const depositNumber= getInputNumber("pickDeposit");    
     updateSpanText('currentDeposit',depositNumber);
     updateSpanText('currentBalance',depositNumber);
-
 
     document.getElementById('pickDeposit').value = "";
 })
@@ -27,6 +25,7 @@ depositBtn.addEventListener('click', function(){
 
 const withdrawBtn = document.getElementById('addWithdraw');
 withdrawBtn.addEventListener('click', function(){
+    
     const withdrawNumber = getInputNumber('withdrawAmount');
     updateSpanText("currentWithdraw", withdrawNumber);
     updateSpanText("currentBalance", -1*withdrawNumber);
@@ -34,11 +33,15 @@ withdrawBtn.addEventListener('click', function(){
     document.getElementById('withdrawAmount').value = "";
 })
 
+// Taking value from textbox and convert into float
+
 function getInputNumber(id){
     const withdrawAmount = document.getElementById(id).value;
     const withdrawNumber = parseFloat(withdrawAmount);
     return withdrawNumber;
 }
+
+// Adding current balance + from input balance
 
 function updateSpanText(id,depositNumber)
 {
