@@ -25,7 +25,7 @@
             <div class="col-md-4">
                 <div class="deposit common">
                     <h5>Deposit</h5>
-                    <h2>$00</h2>
+                    <h2>$<span id="currentDeposit">00</span></h2>
                 </div>
             </div>
         
@@ -33,7 +33,7 @@
             <div class="col-md-4">
                 <div class="withdraw common">
                     <h5>Withdraw</h5>
-                    <h2>$00</h2>
+                    <h2>$<span id="currentWithdraw">00</span></h2>
                 </div>
             </div>
        
@@ -41,7 +41,7 @@
             <div class="col-md-4">
                 <div class="balance common">
                     <h5>Balance</h5>
-                    <h2>$1200</h2>
+                    <h2>$<span id="currentBalance">1200</span></h2>
                 </div>
             </div>
         </div>
@@ -57,9 +57,9 @@
             <div class="col-md-6">
                 <div class="submit-area">
                     <h5>Withdraw</h5>
-                    <input type="text" class="form-control" placeholder="$ amount you want to withdraw">
+                    <input id="withdrawAmount" type="text" class="form-control" placeholder="$ amount you want to withdraw">
                     <br>
-                    <button class="btn btn-success">Withdraw</button>
+                    <button id="addWithdraw" class="btn btn-success">Withdraw</button>
                 </div>
             </div>
         </div>
